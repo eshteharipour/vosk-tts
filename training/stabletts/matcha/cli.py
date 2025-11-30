@@ -240,7 +240,7 @@ def load_matcha(model_name, checkpoint_path, device):
     from matcha.models.matcha_tts import MatchaTTS
 
     print(f"[!] Loading {model_name}!")
-    model = MatchaTTS.load_from_checkpoint(checkpoint_path, map_location=device, strict=False)
+    model = MatchaTTS.load_from_checkpoint(checkpoint_path, map_location=device)
     model.eval()
     model.to(device)
 
